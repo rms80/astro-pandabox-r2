@@ -19,7 +19,7 @@ If you have an existing content config file update it to include the content def
 
 ```typescript
 const galleries = defineCollection({
-  loader: glob({ pattern: "*.json", base: "src/content/galleries" }),
+  loader: glob({ pattern: '*.json', base: 'src/content/galleries' }),
   schema: ({ image }) =>
     z.object({
       images: z.array(

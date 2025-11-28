@@ -1,7 +1,7 @@
 ---
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
-import { ClientRouter } from "astro:transitions";
+import { ClientRouter } from 'astro:transitions';
+import Footer from '@components/Footer.astro';
+import Header from '@components/Header.astro';
 
 interface Props {
   title: string;
@@ -10,7 +10,7 @@ interface Props {
 const { title } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-import "@styles/reset.css";
+import '@styles/reset.css';
 ---
 
 <!doctype html>
@@ -47,7 +47,7 @@ import "@styles/reset.css";
     />
     <meta
       property="og:image"
-      content={canonicalURL + "images/pandabox-og-card.png"}
+      content={canonicalURL + 'images/pandabox-og-card.png'}
     />
     <meta
       property="og:image:alt"
@@ -69,19 +69,19 @@ import "@styles/reset.css";
     --maxchars: 75ch;
   }
   @font-face {
+    src: local('Comfortaa'), url('/fonts/Comfortaa-VariableFont_wght.woff2');
     font-family: Comfortaa;
-    src: local("Comfortaa"), url("/fonts/Comfortaa-VariableFont_wght.woff2");
     font-display: swap;
   }
   body {
-    background: var(--stone-1);
-    color: var(--gray-11);
-    font-size: var(--font-size-3);
-    font-family: var(--font-sans);
-    line-height: 1.5;
-    min-height: 100dvh;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    background: var(--stone-1);
+    min-height: 100dvh;
+    color: var(--gray-11);
+    font-size: var(--font-size-3);
+    line-height: 1.5;
+    font-family: var(--font-sans);
   }
   p {
     max-width: var(--maxchars);
@@ -100,19 +100,19 @@ import "@styles/reset.css";
     gap: var(--gap);
   }
   .surface {
+    margin-inline: auto;
     width: 80%;
     max-width: 1200px;
-    margin-inline: auto;
   }
   footer {
+    margin-block-start: var(--size-fluid-4);
     background: var(--stone-5);
     padding-block: var(--size-fluid-2);
-    margin-block-start: var(--size-fluid-4);
   }
   header {
+    margin-block-end: var(--size-fluid-4);
     background: var(--stone-5);
     padding-block: var(--size-fluid-2);
-    margin-block-end: var(--size-fluid-4);
   }
   h1,
   h2 {
@@ -122,8 +122,8 @@ import "@styles/reset.css";
     padding-block-start: var(--size-10);
   }
   hr {
-    width: 50%;
     margin-block: var(--size-6);
+    width: 50%;
   }
   @media (width <= 640px) {
     .surface {
