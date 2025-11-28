@@ -260,12 +260,6 @@ const images = gallery?.data.images ?? [];
     opacity: 0;
     transition: opacity var(--duration-close-transition) ease;
   }
-  .closing .active .lightbox-image {
-    /* This needs more work, but gonna ship as is */
-    /* animation: zoom-out-animation var(--duration-close-transition) ease-out
-      forwards;
-    outline: 4px solid red; */
-  }
 
   /* Lightbox Content */
   .lightbox-content {
@@ -310,8 +304,6 @@ const images = gallery?.data.images ?? [];
       opacity: 1;
       transition: opacity var(--duration-background-transition) ease-in;
       padding: 1ch;
-      /* background: oklch(10% 0 0 / 20%); */
-      /* background-image: linear-gradient(to right, orange 50%, pink 50%); */
     }
     .lightbox-image {
       /* Custom properties, origin and scall are modified by JS  */

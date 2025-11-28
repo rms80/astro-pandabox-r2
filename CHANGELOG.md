@@ -22,3 +22,9 @@
 ### Upgrade to Astro 5.10 Responsive images
 
 - Use responsive images, constrained for thumbnails and full-width for slides.
+
+## 0.0.5
+
+### Changed
+
+- Debug console logging now only appears in development mode, not in production builds

@@ -1,7 +1,7 @@
 {
   "name": "astro-pandabox",
   "type": "module",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A lightbox/gallery component for Astro, using content collections, optimised images and modern CSS",
   "author": {
     "name": "StJohn Mackay"
@@ -24,7 +24,7 @@
     "format": "biome format --write .",
     "lint": "biome lint --write .",
     "check": "biome check --write .",
-    "prettier": " prettier . --write",
+    "prettier": "prettier . --write",
     "clean": "rm -rf dist .astro",
     "type-check": "astro check",
     "test": "astro check && biome check src/components src/layouts src/pages src/types *.mjs *.json"
