@@ -467,7 +467,7 @@ const images = gallery?.data.images ?? [];
     const closeButton =
       document.querySelector<HTMLButtonElement>('.close-button');
 
-    const debug = false; // Enable debug logging
+    const debug = import.meta.env.DEV; // Enable debug logging in development only
 
     // Set closeDuration from CSS custom property
     const closeDuration =
@@ -477,7 +477,7 @@ const images = gallery?.data.images ?? [];
         ),
       ) * 1000; // Convert seconds to milliseconds
 
-    console.log(closeDuration);
+    if (debug) console.log(closeDuration);
     let currentIndex = 0;
     let resizeTimeout: number | undefined;
 
@@ -709,7 +709,7 @@ const images = gallery?.data.images ?? [];
           // Calculate and log the duration
           const endTime = Date.now();
           const duration = endTime - startTime;
-          console.log(`Dialog closing transition duration: ${duration} ms`);
+          if (debug) console.log(`Dialog closing transition duration: ${duration} ms`);
         }, closeDuration);
       }
     }
